@@ -1,7 +1,6 @@
 FROM python:3.10-slim
-RUN apt-get update &&\
-  apt install asterisk -y &&\
-  rm -rf /var/lib/apt/lists/*
+RUN apt-get update
+
 WORKDIR /home
 
 COPY extensions.conf sip.conf /etc/asterisk/
